@@ -327,21 +327,20 @@ export default function Checkout({ onOrderPlaced }) {
               </div>
             </div>
 
-            <div className="border-t border-gray-200 pt-6">
+            {/* <div className="border-t border-gray-200 pt-6">
               <h4 className="font-semibold text-gray-900 mb-4">Items</h4>
               <div id="tracking-items" className="space-y-3">
-                {/* <!-- Order items will be inserted here --> */}
               </div>
-            </div>
+            </div> */}
 
-            <div className="border-t border-gray-200 pt-4">
+            {/* <div className="border-t border-gray-200 pt-4">
               <div className="flex justify-between text-xl font-bold">
                 <span>Total</span>
                 <span className="text-primary">
                   $<span id="tracking-total">{total}</span>
                 </span>
               </div>
-            </div>
+            </div> */}
 
             <button
               onClick={() => navigate("/")}
