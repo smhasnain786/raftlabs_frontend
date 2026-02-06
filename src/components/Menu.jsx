@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchMenu } from "../services/api";
 import { useCart } from "../contexts/cartContext";
+import { Plus } from "lucide-react";
 
 export default function Menu() {
   const [menu, setMenu] = useState([]);
@@ -76,12 +77,12 @@ menu.map(item=>{
                 </span>
             </div>
             <div className="p-6">
-                <h3 className="font-display text-xl font-semibold text-gray-900 mb-2">{item.name}</h3>
+                <h3 className="font-display text-lg font-semibold text-gray-900 mb-2">{item.name}</h3>
                 <p className="text-gray-600 text-sm mb-4 line-clamp-2">{item.description}</p>
                 <div className="flex items-center justify-between">
-                    <span className="text-3xl font-display font-bold text-primary">{item.price.toFixed(2)}</span>
+                    <span className="text-2xl font-display font-bold text-amber-500">Rs {item.price.toFixed(2)}</span>
                     <button onClick={() => addToCart(item)} className="btn-primary text-white px-6 py-3 rounded-xl font-semibold flex items-center space-x-2 shadow-lg">
-                        <i className="fas fa-plus"></i>
+                        <Plus size={20}   />
                         <span >Add</span>
                     </button>
                 </div>
